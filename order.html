@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Carelle Mulawa-Richards">
+<title>home</title>
+<link href="booksrus.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900" rel="stylesheet">
+<script src="orderform.js"></script>
+</head>
+
+<body>
+<header> 
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Logo -->
+  <section class="logo_area" id="logo_area">
+    <div class="logo_content"> 
+      <h1 class="logo"><a href="home.html">Booksrus</a></h1>
+      <h2>The best secondhand book shop in Geelong</h2>
+      
+      <!-- Search form -->
+      <form name="search" id="search">
+        <div class="search_fields">
+          <input class="search" type="text" name="search" id="entry1" >
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</header>
+
+<!-- Book order section -->
+<section class= "light" id="order">
+  <h1>Order a book</h1>
+  
+  <!-- Book order form -->
+  <form name="book_order" id="book_order" onSubmit="return validate(book_order)" action=”#”>
+    <!-- Books -->
+    <h3>Books</h3>
+    <div class="full_col">
+      <label class="required">Which book(s) would you like to order?</label>
+      <select class="select_multiple" name="book_name" id="book_name" multiple>
+        <option value="Live Well on Less">Live Well on Less</option>
+        <option value="Eat Real Food">Eat Real Food</option>
+        <option value="My Life">My Life: It's a Long Story</option>
+        <option value="Sword of Summer">Sword of Summer</option>
+        <option value="Clementine Rose and the Birthday Emergency">Clementine Rose and the Birthday Emergency</option>
+        <option value="Middle School: Just My Rotten Luck">Middle School: Just My Rotten Luck</option>
+        <option value="Introduction to Computational Science">Introduction to Computational Science</option>
+        <option value="Fundamentals of Digital Logic">Fundamentals of Digital Logic</option>
+        <option value="Distributed Systems">Distributed Systems</option>
+      </select>
+       <label class="tip">Hold cntrl to select multiple</label>
+    </div>
+    <div class="clear"></div>
+    
+    <!-- Customer details -->
+    <h3>Your details</h3>
+    <div class="left_col">
+      <label class="required">First name</label>
+      <input type="text" name="first_name" id="first_name" placeholder="e.g. John">
+    </div>
+    <div class="right_col">
+      <label class="required">Last name</label>
+      <input type="text" name="last_name" id="last_name" placeholder="e.g. Smith">
+    </div>
+    <div class="left_col">
+      <label class="required">Telephone</label>
+      <input type="text" name="telephone" id="telephone" placeholder="e.g. (03) 8409 8938">
+    </div>
+    <div class="right_col">
+      <label class="required">Email</label>
+      <input type="text" name="email" id="email" placeholder="e.g. example@booksrus.com">
+    </div>
+    <div class="clear"></div>
+    
+    <!-- Delivery details -->
+    <h3>Delivery</h3>
+    <div class="left_col">
+      <label class="required">Address</label>
+      <input type="text" name="address" id="address" placeholder="e.g. Unit 1, 25 Lolipop Lane">
+    </div>
+    <div class="right_col">
+      <label class="required">City</label>
+      <input type="text" name="city" id="city" placeholder="e.g. Melbourne">
+    </div>
+    <div class="left_col">
+      <label class="required">State</label>
+      <select class="select_full_width" name="state" id="state">
+       <option selected disabled hidden>Select</option>
+        <option value="QLD">QLD</option>
+        <option value="NSW">NSW</option>
+        <option value="VIC">VIC</option>
+        <option value="WA">WA</option>
+        <option value="SA">SA</option>
+        <option value="ACT">ACT</option>
+        <option value="TAS">TAS</option>
+        <option value="NT">NT</option>
+      </select>
+    </div>
+    <div class="right_col">
+      <label class="required">Postcode</label>
+      <input type="text" name="postcode" id="postcode" placeholder="e.g. 3122">
+    </div>
+    <div class="clear"></div>
+    
+    <!-- Payment details -->
+    <h3>Payment</h3>
+    <div class="left_col">
+      <label class="required">Card number</label>
+      <input type="text" name="card_number" id="card_number" placeholder="e.g. 4012888888881881">
+    </div>
+    <div class="right_col">
+      <label class="required">Name on card</label>
+      <input type="text" name="card_name" id="card_name" placeholder="e.g. J Smith">
+    </div>
+    <div class="left_col">
+      <label class="required">Expiry date</label>
+      <div class="one_fourth_select">
+        <select name="month" id="month">
+         <option selected disabled hidden>Month</option>
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+      </div>
+      <div class="two_fourth_select">
+        <select name="year" id="year">
+         <option selected disabled hidden>Year</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+          <option value="2026">2026</option>
+          <option value="2027">2027</option>
+        </select>
+      </div>
+    </div>
+    <div class="right_col">
+      <label class="required">CVV</label>
+      <input type="text" name="CVV" id="CVV" placeholder="e.g. 313">
+            <label class="tip">3-4 numbers on back of card</label>
+    </div>
+    <div class="clear"></div>
+    <div class="center_align">
+      <button type="submit">Submit</button>
+      <button class="reset_button" type="reset">Reset</button>
+    </div>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p class="footer_text">© Deakin University, School of Information Technology. This web page has been developed as a student assignment for the unit SIT104: Introduction to Web Development. Therefore, it is not part of the university's authorised web site. Do not use the information contained on this web page in any way. Acknowledgement: All information about books was retrieved from Booktopia website <a href="https://www.booktopia.com.au/index.jsp">www.booktopia.com.au</a>.</p>
+</footer>
+</body>
+</html>
